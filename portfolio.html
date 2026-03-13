@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antoine Heidet — Dev Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <span class="loader-text">Initialisation<span class="loader-dots"></span></span>
+  </div>
+</div>
+
+<!-- CANVAS BACKGROUND -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo"><span class="logo-bracket">[</span>AH<span class="logo-bracket">]</span></div>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">À propos</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projets</a>
+    <a href="#experience" class="nav-link">Parcours</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+  <div class="nav-status"><span class="status-dot"></span><span>Disponible</span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="tag-dash">—</span> Développeur Web Fullstack</div>
+    <h1 class="hero-name">
+      <span class="name-line" data-text="ANTOINE">ANTOINE</span>
+      <span class="name-line accent" data-text="HEIDET">HEIDET</span>
+    </h1>
+    <p class="hero-sub">Code · Infrastructure · Sécurité</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-main">
+        <span class="btn-text">Voir les projets</span>
+        <span class="btn-icon">↗</span>
+        <span class="btn-bg"></span>
+      </a>
+      <a href="https://github.com/Heidet" target="_blank" class="btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-card" data-delay="0"><div class="stat-num" data-count="6">0</div><div class="stat-label">ans dev</div></div>
+      <div class="stat-card" data-delay="150"><div class="stat-num" data-count="9">0</div><div class="stat-label">ans info</div></div>
+      <div class="stat-card" data-delay="300"><div class="stat-num" data-count="15">0</div><div class="stat-label">technos</div></div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+        <span class="t-title">heidet@dev:~</span>
+      </div>
+      <div class="terminal-body" id="terminal-body"></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><div class="scroll-wheel"><div class="scroll-wheel-inner"></div></div><span>Scroll</span></div>
+</section>
+
+<!-- À PROPOS -->
+<section id="about" class="section">
+  <div class="section-label">
+    <span class="label-num">01</span><span class="label-line"></span><span class="label-text">À propos</span>
+  </div>
+  <div class="about-grid">
+    <div class="about-avatar reveal-left">
+      <div class="avatar-frame">
+        <div class="avatar-inner">
+          <div class="avatar-initials">AH</div>
+          <div class="avatar-rings"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div></div>
+        </div>
+        <div class="avatar-badge"><span class="badge-n">6+</span><span class="badge-t">ans</span></div>
+      </div>
+    </div>
+    <div class="about-content reveal-right">
+      <h2 class="about-title">Bâtisseur de <em>systèmes</em>,<br>chasseur de <em>failles</em>.</h2>
+      <p class="about-text">Développeur depuis <strong>6 ans</strong> chez ezdev — éditeur du logiciel EZGED — et dans l'informatique depuis <strong>9 ans</strong>. Mon terrain couvre le frontend complexe, les APIs robustes, l'infra automatisée, et le pentest en environnement contrôlé.</p>
+      <div class="about-tags">
+        <span class="atag">Frontend</span><span class="atag">Backend</span><span class="atag">Infra</span><span class="atag">Pentest</span><span class="atag">Réseau</span><span class="atag">Linux</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="skills" class="section">
+  <div class="section-label">
+    <span class="label-num">02</span><span class="label-line"></span><span class="label-text">Compétences</span>
+  </div>
+  <div class="skills-tabs">
+    <button class="stab active" data-tab="frontend">Frontend</button>
+    <button class="stab" data-tab="backend">Backend</button>
+    <button class="stab" data-tab="infra">Infra & Outils</button>
+    <button class="stab" data-tab="secu">Sécurité</button>
+  </div>
+  <div class="skills-panels">
+
+    <div class="skills-panel active" id="tab-frontend">
+      <div class="skills-row">
+        <div class="sk-card" style="--d:0ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" transform="rotate(120 12 12)"/></svg></div><span class="sk-name">React</span><div class="sk-bar"><div class="sk-fill" style="--p:90%"></div></div></div>
+        <div class="sk-card" style="--d:60ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" fill="#1F6B75"/><text x="12" y="16" text-anchor="middle" font-size="9" font-weight="bold" fill="white" font-family="monospace">EXT</text></svg></div><span class="sk-name">Ext JS</span><div class="sk-bar"><div class="sk-fill" style="--p:95%"></div></div></div>
+        <div class="sk-card" style="--d:120ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" fill="#E34F26"/><path d="M12 8.5H8.7L8.5 6.5H12V4.5H6.3l.5 5.5h5.2v2h-4.8l.4 4.5L12 17.5v-2.1l-2.5-.7-.2-1.7H12v-2.5z" fill="white"/></svg></div><span class="sk-name">HTML5</span><div class="sk-bar"><div class="sk-fill" style="--p:98%"></div></div></div>
+        <div class="sk-card" style="--d:180ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" fill="#264DE4"/><path d="M12 8.5H8.5l.2 2H12v2H8.9l.2 2.5L12 16v-2l-2-.6-.2-1.7H12V8.5z" fill="white"/></svg></div><span class="sk-name">CSS3</span><div class="sk-bar"><div class="sk-fill" style="--p:95%"></div></div></div>
+        <div class="sk-card" style="--d:240ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 6C9.6 6 8.1 7.2 7.5 9.6c.9-1.2 1.95-1.65 3.15-1.35.685.171 1.174.667 1.715 1.215C13.24 10.39 14.22 11.4 16.5 11.4c2.4 0 3.9-1.2 4.5-3.6-.9 1.2-1.95 1.65-3.15 1.35C15.26 7.01 14.28 6 12 6zM7.5 11.4C5.1 11.4 3.6 12.6 3 15c.9-1.2 1.95-1.65 3.15-1.35.685.171 1.174.667 1.715 1.215C8.74 15.79 9.72 16.8 12 16.8c2.4 0 3.9-1.2 4.5-3.6-.9 1.2-1.95 1.65-3.15 1.35C10.76 12.41 9.78 11.4 7.5 11.4z" fill="#38BDF8"/></svg></div><span class="sk-name">Tailwind</span><div class="sk-bar"><div class="sk-fill" style="--p:85%"></div></div></div>
+        <div class="sk-card" style="--d:300ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M2 7l10-6 10 6-10 6L2 7z" fill="#007FFF"/><path d="M2 7v6l10 6V13L2 7z" fill="#0059B2"/><path d="M22 7v6l-10 6V13l10-6z" fill="#007FFF"/></svg></div><span class="sk-name">Material UI</span><div class="sk-bar"><div class="sk-fill" style="--p:85%"></div></div></div>
+        <div class="sk-card" style="--d:360ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 3Q12 3 18 9Q24 15 21 21L3 21Z" fill="#F9A03C" opacity="0.9"/><circle cx="18" cy="9" r="2.5" fill="#F9A03C"/></svg></div><span class="sk-name">D3.js</span><div class="sk-bar"><div class="sk-fill" style="--p:80%"></div></div></div>
+        <div class="sk-card" style="--d:420ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FF6384" stroke-width="1.5" fill="none"/><path d="M12 12L12 3A9 9 0 0 1 21 12Z" fill="#FF6384"/><path d="M12 12L21 12A9 9 0 0 1 5.7 18.7Z" fill="#36A2EB"/><path d="M12 12L5.7 18.7A9 9 0 0 1 12 3Z" fill="#FFCE56"/></svg></div><span class="sk-name">Chart.js</span><div class="sk-bar"><div class="sk-fill" style="--p:82%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skills-panel" id="tab-backend">
+      <div class="skills-row">
+        <div class="sk-card" style="--d:0ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M11.9 2C7.4 2 7.6 4 7.6 4v2h4.4v.6H6.1S3 6.3 3 11s2.6 4.5 2.6 4.5H7v-2.2s-.1-2.6 2.6-2.6h4.4s2.4.1 2.4-2.3V4.4C16.4 2 11.9 2 11.9 2zm-1.4 1.4a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z" fill="#3776AB"/><path d="M12.1 22c4.5 0 4.3-2 4.3-2v-2h-4.4v-.6h5.9s3.1.3 3.1-4.4-2.6-4.5-2.6-4.5H17v2.2s.1 2.6-2.6 2.6H10s-2.4-.1-2.4 2.3v3.9C7.6 22 12.1 22 12.1 22zm1.4-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z" fill="#FFD43B"/></svg></div><span class="sk-name">Python</span><div class="sk-bar"><div class="sk-fill" style="--p:90%"></div></div></div>
+        <div class="sk-card" style="--d:60ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" fill="#092E20"/><text x="12" y="16" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#44B78B" font-family="monospace">DRF</text></svg></div><span class="sk-name">Django REST</span><div class="sk-bar"><div class="sk-fill" style="--p:88%"></div></div></div>
+        <div class="sk-card" style="--d:120ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M17.1 2.4c-1.3-.3-2.6.1-3.7.7-1-.4-2.2-.6-3.5-.4C6.1 3.3 3 6.5 3 10.4c0 2.4.8 4.1 1.9 4.8.5.3 1 .4 1.5.2.5 1.4 1.2 2.4 2 3 .5.4 1.1.6 1.7.5v1.8c0 .8.6 1.4 1.3 1.3l.5-1.4.5 1.4c.7.1 1.3-.5 1.3-1.3v-1.9c1.6-.3 3-1.9 3.7-4.2.4.1.8 0 1.2-.2 1.1-.7 1.8-2.4 1.8-4.6 0-2-.8-4-2.3-5.4z" fill="#336791"/><ellipse cx="9.5" cy="8.5" rx="1" ry="1.5" fill="white" opacity="0.8"/><ellipse cx="14" cy="8.5" rx="1" ry="1.5" fill="white" opacity="0.8"/></svg></div><span class="sk-name">PostgreSQL</span><div class="sk-bar"><div class="sk-fill" style="--p:85%"></div></div></div>
+        <div class="sk-card" style="--d:180ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="8" rx="9" ry="4" fill="#D82C20"/><path d="M3 8v3c0 2.2 4 4 9 4s9-1.8 9-4V8" fill="#D82C20"/><ellipse cx="12" cy="8" rx="9" ry="4" fill="#FF6B6B" opacity="0.4"/><text x="12" y="9.5" text-anchor="middle" font-size="4.5" font-weight="bold" fill="white" font-family="monospace">REDIS</text></svg></div><span class="sk-name">Redis</span><div class="sk-bar"><div class="sk-fill" style="--p:70%"></div></div></div>
+        <div class="sk-card" style="--d:240ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12Q3 6 9 6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><path d="M3 12Q3 18 9 18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><path d="M21 12Q21 6 15 6" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><path d="M21 12Q21 18 15 18" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="2.5" fill="#c9a84c"/></svg></div><span class="sk-name">WebSocket</span><div class="sk-bar"><div class="sk-fill" style="--p:72%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skills-panel" id="tab-infra">
+      <div class="skills-row">
+        <div class="sk-card" style="--d:0ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M13.5 11h-2v-2h2v2zm-2.5 0h-2V9h2v2zm-2.5 0H6.5V9H8.5v2zm5 0h-2V9h2v2zm2.5 0h-2V9h2v2zm-5-2.5h-2V6.5h2V8.5zm2.5 0h-2V6.5h2V8.5z" fill="#2496ED"/><path d="M22.5 11.5c-.4-.3-1.4-.4-2.1-.3-.2-.7-.6-1.3-1.3-1.7l-.4-.2-.3.4c-.4.6-.5 1.5-.4 2.2-.3-.2-.9-.2-1.2-.2H2.5c-.3 1.1 0 3.3 1.3 4.6.9.9 2.3 1.2 3.7 1.2 3.5 0 6.1-1.6 7.5-4.5.5 0 1.5 0 2-.6.1-.1.3-.3.5-.9z" fill="#2496ED"/></svg></div><span class="sk-name">Docker</span><div class="sk-bar"><div class="sk-fill" style="--p:88%"></div></div></div>
+        <div class="sk-card" style="--d:60ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EE0000"/><path d="M12 4L16 18L12 15L8 18Z" fill="white"/></svg></div><span class="sk-name">Ansible</span><div class="sk-bar"><div class="sk-fill" style="--p:82%"></div></div></div>
+        <div class="sk-card" style="--d:120ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 6 5 10c0 2 .5 3.5 1 4.5-.5 1-1 2.5-1 3.5 0 1.5 1 2.5 2 2.5.5 0 1-.2 1.5-.5.5.3 1.5.5 3.5.5s3-.2 3.5-.5c.5.3 1 .5 1.5.5 1 0 2-1 2-2.5 0-1-.5-2.5-1-3.5.5-1 1-2.5 1-4.5 0-4-3-8-7-8z" fill="#FCC624"/><circle cx="9.5" cy="10.5" r="1" fill="#333"/><circle cx="14.5" cy="10.5" r="1" fill="#333"/></svg></div><span class="sk-name">Linux</span><div class="sk-bar"><div class="sk-fill" style="--p:92%"></div></div></div>
+        <div class="sk-card" style="--d:180ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M2 4.5L10.5 3.5V11H2V4.5z" fill="#00ADEF"/><path d="M11.5 3.4L22 2V11H11.5V3.4z" fill="#00ADEF"/><path d="M2 12H10.5V19.5L2 18.5V12z" fill="#00ADEF"/><path d="M11.5 12H22V21L11.5 19.7V12z" fill="#00ADEF"/></svg></div><span class="sk-name">Windows</span><div class="sk-bar"><div class="sk-fill" style="--p:85%"></div></div></div>
+        <div class="sk-card" style="--d:240ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M21.7 11.3l-9-9a1 1 0 0 0-1.4 0l-2 2 2.5 2.5a1.2 1.2 0 0 1 1.5 1.5l2.4 2.4a1.2 1.2 0 1 1-.7.7L13 9v6.3a1.2 1.2 0 1 1-1 0V8.9a1.2 1.2 0 0 1-.7-1.6L8.9 4.9l-6.6 6.6a1 1 0 0 0 0 1.4l9 9a1 1 0 0 0 1.4 0l9-9a1 1 0 0 0 0-1.6z" fill="#F05033"/></svg></div><span class="sk-name">Git</span><div class="sk-bar"><div class="sk-fill" style="--p:93%"></div></div></div>
+        <div class="sk-card" style="--d:300ms"><div class="sk-icon"><svg viewBox="0 0 24 24"><path d="M12 3C9 3 7.5 5 7 6.5 5.5 6.8 4 8.5 4 11c0 4 3 9 5 9 1 0 1.5-.5 3-.5s2 .5 3 .5c2 0 5-5 5-9 0-2.5-1.5-4.2-3-4.5C16.5 5 15 3 12 3z" fill="#555"/><ellipse cx="10" cy="4" rx="2" ry="1.5" fill="#888" transform="rotate(-15 10 4)"/></svg></div><span class="sk-name">macOS</span><div class="sk-bar"><div class="sk-fill" style="--p:90%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skills-panel" id="tab-secu">
+      <div class="skills-row">
+        <div class="sk-card" style="--d:0ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#c9a84c" stroke-width="1.5"/><path d="M8 12L11 15L16 9" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="sk-name">Pentest</span><div class="sk-bar"><div class="sk-fill" style="--p:75%"></div></div></div>
+        <div class="sk-card" style="--d:60ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#268BEE"/><path d="M7 7L12 12L7 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7L17 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><span class="sk-name">Kali Linux</span><div class="sk-bar"><div class="sk-fill" style="--p:78%"></div></div></div>
+        <div class="sk-card" style="--d:120ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 7v5c0 4.4 3.4 8.5 8 9.5 4.6-1 8-5.1 8-9.5V7L12 2z" fill="#5B5EA6"/><path d="M12 7v5m0 3v.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><span class="sk-name">OWASP</span><div class="sk-bar"><div class="sk-fill" style="--p:72%"></div></div></div>
+        <div class="sk-card" style="--d:180ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="2.5" fill="#c9a84c"/><circle cx="4" cy="19" r="2.5" fill="#c9a84c"/><circle cx="20" cy="19" r="2.5" fill="#c9a84c"/><path d="M12 7.5L4 16.5M12 7.5L20 16.5M4 19L20 19" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round"/></svg></div><span class="sk-name">Réseau</span><div class="sk-bar"><div class="sk-fill" style="--p:80%"></div></div></div>
+        <div class="sk-card" style="--d:240ms"><div class="sk-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#c9a84c" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1.5" fill="#c9a84c"/></svg></div><span class="sk-name">Audit sécurité</span><div class="sk-bar"><div class="sk-fill" style="--p:70%"></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJETS GITHUB -->
+<section id="projects" class="section">
+  <div class="section-label">
+    <span class="label-num">03</span><span class="label-line"></span><span class="label-text">Projets GitHub</span>
+  </div>
+  <div class="projects-meta reveal-up">
+    <span>Chargés en temps réel ·</span>
+    <a href="https://github.com/Heidet" target="_blank" class="meta-link">github.com/Heidet ↗</a>
+  </div>
+  <div class="github-grid" id="github-grid">
+    <div class="gh-loading"><div class="loading-spinner"></div><span>Connexion à l'API GitHub…</span></div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="experience" class="section">
+  <div class="section-label">
+    <span class="label-num">04</span><span class="label-line"></span><span class="label-text">Parcours</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item reveal-left">
+      <div class="tl-year">2019 — NOW</div>
+      <div class="tl-content">
+        <div class="tl-dot"></div>
+        <h3 class="tl-role">Développeur Web Fullstack</h3>
+        <div class="tl-company">ezdev · Éditeur EZGED</div>
+        <p class="tl-desc">6 ans sur la plateforme EZGED — GED enterprise. Frontend riche en Ext JS & React, APIs Django REST, déploiements Docker/Ansible, bases PostgreSQL.</p>
+        <div class="tl-tags"><span>Ext JS</span><span>React</span><span>Django</span><span>Docker</span><span>Ansible</span></div>
+      </div>
+    </div>
+    <div class="tl-item reveal-left" style="--d:150ms">
+      <div class="tl-year">2016 — 2019</div>
+      <div class="tl-content">
+        <div class="tl-dot"></div>
+        <h3 class="tl-role">Informaticien & Autodidacte</h3>
+        <div class="tl-company">Systèmes · Réseaux · Web</div>
+        <p class="tl-desc">Exploration des OS (Linux, macOS, Windows), réseaux TCP/IP, premiers projets web. Développement d'une passion pour la sécurité offensive.</p>
+        <div class="tl-tags"><span>Linux</span><span>Réseau</span><span>Python</span><span>Pentest</span></div>
+      </div>
+    </div>
+    <div class="tl-item reveal-left" style="--d:300ms">
+      <div class="tl-year">1995</div>
+      <div class="tl-content">
+        <div class="tl-dot"></div>
+        <h3 class="tl-role">Naissance · Belfort</h3>
+        <div class="tl-company">23 mai 1995</div>
+        <p class="tl-desc">Quelques décennies et quelques milliers de commits plus tard…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-label">
+    <span class="label-num">05</span><span class="label-line"></span><span class="label-text">Contact</span>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-left reveal-left">
+      <h2 class="contact-title">Construisons<br><em>quelque chose.</em></h2>
+      <p class="contact-sub">Disponible pour projets freelance, collaborations techniques ou échanges autour de la sécurité.</p>
+    </div>
+    <div class="contact-right reveal-right">
+      <a href="https://github.com/Heidet" target="_blank" class="contact-card">
+        <div class="cc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></div>
+        <div class="cc-info"><div class="cc-label">GitHub</div><div class="cc-val">github.com/Heidet</div></div>
+        <span class="cc-arrow">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/antoine-heidet/" target="_blank" class="contact-card">
+        <div class="cc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+        <div class="cc-info"><div class="cc-label">LinkedIn</div><div class="cc-val">antoine-heidet</div></div>
+        <span class="cc-arrow">↗</span>
+      </a>
+      <a href="mailto:contact@antoine-heidet.dev" class="contact-card contact-card-email">
+        <div class="cc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="cc-info"><div class="cc-label">Email</div><div class="cc-val">contact@antoine-heidet.dev</div></div>
+        <span class="cc-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">[AH]</span>
+  <span class="footer-copy">© 2025 Antoine Heidet</span>
+  <span class="footer-built">Built with precision</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
