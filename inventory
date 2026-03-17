@@ -1,0 +1,2 @@
+[webservers]
+51.254.39.24 ansible_user=debian ansible_python_interpreter=/usr/bin/python3

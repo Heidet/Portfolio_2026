@@ -1,0 +1,42 @@
+- name: Déploiement du portfolio
+  hosts: webservers
+  become: yes
+  become_user: root
+  become_method: sudo
+  vars:
+    ansible_remote_tmp: /tmp/ansible_tmp
+    ansible_managed_temp: no
+    ansible_ssh_extra_args: '-o ControlPersist=no'
+    allow_world_readable_tmpfiles: true
+  vars_files:
+    - secrets.yml
+  tasks:
+    - name: get the username running the deploy
+      command: whoami
+      register: username_on_the_host
+    - debug: var=username_on_the_host
+
+    # ─── Créer le dossier portfolio ──────────────────────────────────────────────
+    - name: Créer le dossier portfolio
+      ansible.builtin.file:
+        path: /opt/portfolio
+        state: directory
+        mode: '0755'
+
+    # ─── Copier les fichiers ─────────────────────────────────────────────────────
+    - name: Synchroniser les fichiers du portfolio
+      ansible.posix.synchronize:
+        src: ./
+        dest: /opt/portfolio/
+        delete: yes
+        rsync_opts:
+          - "--exclude=.git"
+          - "--exclude=.DS_Store"
+          - "--exclude=playbook.yml"
+          - "--exclude=secrets.yml"
+          - "--exclude=inventory.ini"
+
+    # ─── Recharger nginx dans le container ───────────────────────────────────────
+    - name: Recharger nginx dans le container s6overlay
+      command: docker exec docker-collab nginx -s reload
+      ignore_errors: yes
